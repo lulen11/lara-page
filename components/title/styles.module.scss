@@ -1,0 +1,23 @@
+@import '../../styles/global.module';
+
+.featureHeading {
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 1.4em;
+  margin-bottom: 1.5em;
+
+  @media screen and (min-width: $md) {
+    margin-right: 4em;
+  }
+
+  a {
+      color: $secondary-color;
+      text-decoration: none;
+      transition: all 0.2s linear;
+
+      &:hover {
+          color: $tertiary-color;
+      }
+  }
+}

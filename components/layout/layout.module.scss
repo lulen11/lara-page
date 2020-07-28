@@ -1,0 +1,11 @@
+@import '../../styles/global.module';
+
+.container {
+  max-width: 50rem;
+  padding: 0 1em;
+  margin: 5em 1em;
+
+  @media screen and (min-width: $md) {
+    margin: 5em 3em;
+  }
+}

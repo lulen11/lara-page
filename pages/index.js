@@ -1,65 +1,44 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Layout from '../components/layout'
+// import Logo from '../components/logo'
+import Title from '../components/title'
 
 export default function Home() {
+
   return (
-    <div className={styles.container}>
+    <Layout>
+
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Lara Salameh | Frontend Designer</title>
+        <meta name="title" content="Lara Salameh | Frontend Designer" />
+        <meta name="description" content="I'm a frontend designer - I proudly sit in middle ground between design and development. I love coding the frontend of websites, apps, digital products just as much as I love designing them. I have over 10 years industry experience in UX, UI, Frontend Design & Development." />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://larasalameh.com" />
+        <meta property="og:title" content="Lara Salameh | Frontend Designer" />
+        <meta property="og:description" content="I'm a frontend designer - I proudly sit in middle ground between design and development. I love coding the frontend of websites, apps, digital products just as much as I love designing them. I have over 10 years industry experience in UX, UI, Frontend Design & Development." />
+        <meta property="og:image" content="/images/laraMeta@2x.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://larasalameh.com" />
+        <meta property="twitter:title" content="Lara Salameh | Frontend Designer" />
+        <meta property="twitter:description" content="I'm a frontend designer - I proudly sit in middle ground between design and development. I love coding the frontend of websites, apps, digital products just as much as I love designing them. I have over 10 years industry experience in UX, UI, Frontend Design & Development." />
+        <meta property="twitter:image" content="/images/laraMeta@2x.png" />
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon@2x.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400&display=swap" rel="stylesheet" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <main>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        {/* <Logo /> */}
+        <Title>
+          G'day, my name's Lara Salameh. I'm a frontend designer and I'm looking for new opportunities. I'm working on something beautiful to sit here soon. <a href="mailto:hello@larasalameh.com?subject=Hey, I've got something to say!">I'd love to talk!</a>
+        </Title>
+        
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+    </Layout>
   )
 }
