@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
-// import Logo from '../components/logo'
 import Title from '../components/title'
+import Paragraph from '../components/paragraph'
 
 export default function Home() {
 
@@ -39,7 +39,7 @@ export default function Home() {
           <br />
           I'm a frontend designer and I'm looking for new opportunities. I'm working on something beautiful to sit here soon. <a href="mailto:hello@larasalameh.com?subject=Hello Lara">Say hello back!</a>
         </Title>
-        
+        <Paragraph>Call <a href="tel:61424578459">+61 0424 578 459</a>,&nbsp;&nbsp;or write to me at <a href="mailto:hello@larasalameh.com?subject=Hello Lara, let's talk">hello@larasalameh.com</a></Paragraph>
       </main>
     </Layout>
   )

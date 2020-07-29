@@ -1,0 +1,23 @@
+@import '../../styles/global.module';
+
+.paragraph {
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+  color: $black;
+  letter-spacing: 0.02em;
+
+  a {
+      color: $black;
+      text-decoration: none;
+      transition: all 0.5s linear;
+      display: inline-block;
+
+      &:hover {
+        color: $secondary-color;
+        border-bottom: 0.1em solid $tertiary-color;
+      }
+  }
+}
