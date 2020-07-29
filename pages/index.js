@@ -35,7 +35,9 @@ export default function Home() {
 
         {/* <Logo /> */}
         <Title>
-          Hello, my name's Lara Salameh. I'm a frontend designer and I'm looking for new opportunities. I'm working on something beautiful to sit here soon. <a href="mailto:hello@larasalameh.com?subject=Hello Lara">I'd love to talk!</a>
+          Hello, my name's Lara Salameh. 
+          <br />
+          I'm a frontend designer and I'm looking for new opportunities. I'm working on something beautiful to sit here soon. <a href="mailto:hello@larasalameh.com?subject=Hello Lara">Say hello back!</a>
         </Title>
         
       </main>

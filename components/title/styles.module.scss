@@ -1,5 +1,20 @@
 @import '../../styles/global.module';
 
+@keyframes dizzyColors {
+  0%, 100% {
+      color: $secondary-color;
+  }
+  25% {
+      color: $tertiary-color;
+  }
+  50% {
+      color: $olive;
+  }
+  75% {
+      color: $fuschia;
+  }
+}
+
 .featureHeading {
   font-family: 'Source Serif Pro', serif;
   font-weight: 300;
@@ -14,10 +29,11 @@
   a {
       color: $secondary-color;
       text-decoration: none;
-      transition: all 0.2s linear;
+      transition: all 0.5s linear;
+      animation: dizzyColors 3s infinite;
 
       &:hover {
-          color: $tertiary-color;
+        border-bottom: 0.2em solid $royalblue;
       }
   }
 }
