@@ -36,4 +36,12 @@
         border-bottom: 0.2em solid $royalblue;
       }
   }
+  
+  span {
+    color: $tangerine;
+    text-decoration: none;
+    transition: all 0.5s linear;
+    font-size: 1rem;
+    line-height: 0.5rem;
+  }
 }
