@@ -37,7 +37,7 @@ export default function Home() {
         <Title>
           Hello, my name's Lara Salameh. 
           <br />
-          I'm a frontend designer and I'm looking for new opportunities. I'm working on somethiing beautiful to sit here soon. <a href="mailto:hello@larasalameh.com?subject=Hello Lara">Say hello back!</a>
+          I'm a frontend designer and I'm looking for new opportunities. I'm working on something beautiful to sit here soon. <a href="mailto:hello@larasalameh.com?subject=Hello Lara">Say hello back!</a>
         </Title>
         <Paragraph>Call <a href="tel:61424578459">+61 424 578 459</a>,&nbsp;&nbsp;or write to me at <a href="mailto:hello@larasalameh.com?subject=Hello Lara, let's talk">hello@larasalameh.com</a> anytime.</Paragraph>
       </main>
