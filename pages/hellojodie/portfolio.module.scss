@@ -1,0 +1,53 @@
+@import '../../styles/global.module';
+
+.callout {
+    color: $tangerine;
+}
+.columns {
+    border: 2px solid blue;
+    color: grey;
+}
+
+.project {
+    background-color: #ffffff69;
+
+    h3 {
+        font-family: "butlerbold";
+        font-size: 3rem;
+        line-height: 1.1em;
+    }
+
+    p, a {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.6em;
+        font-weight: 300;;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 500;
+        color: $royalblue;
+        margin-top: 1.5em;
+        display: block;
+    }
+}
+.imgWrap{
+	height: 250px;
+    overflow: hidden;
+    
+    img {
+        width: 21em;
+        margin: 0 auto;
+        display: block;
+    }
+}
+.content {
+    padding: 30px 50px 30px 28px;
+    border-right: 1px solid $grey40;
+    height: 80vh;
+
+    p {
+        margin-bottom: 8px;
+    }
+}

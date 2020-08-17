@@ -3,3 +3,28 @@
   font-weight: 100;
   color: $black;
 }
+
+@font-face {
+  font-family: 'butlerbold';
+  src: url('../public/fonts/butler_bold-webfont.woff2') format('woff2'),
+       url('../public/fonts/butler_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'apercu';
+  src: url('../public/fonts/ApercuPro.woff2') format('woff2'),
+       url('../public/fonts/ApercuPro.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+// @font-face {
+//   font-family: 'GT Pressura Mono';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url($cdnRoot+"assets/fonts/gt-pressura/gt-pressura-mono-regular-webfont.woff2");
+// }

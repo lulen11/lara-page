@@ -1,0 +1,97 @@
+@import '../../styles/global.module';
+
+.modalOverlay {
+  animation: fadein 2s ease;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.modalBody {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1100;
+
+  .close {
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    font-size: 40px;
+    padding: 20px;
+  }
+}
+
+.modalDrawerBody {
+  animation: slideIn 1s forwards;
+  bottom: 0;
+  left: 100%;
+  position: fixed;
+  top: 0;
+  transition: 1s transform;
+  width: 75%;
+  z-index: 1100;
+
+  .closeModalIcon {
+    color: grey;
+    cursor: pointer;
+    right: 0.5em;
+    top: 0.5em;
+  }
+  @media screen and (max-width: $sm) {
+    width: 100%;
+  }
+}
+
+.closeModalIcon {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  direction: ltr;
+  font-family: 'Material Icons' !important;
+  font-feature-settings: 'liga';
+  font-size: 32px;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  position: absolute;
+  right: -2rem;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  top: -2rem;
+  white-space: nowrap;
+  word-wrap: normal;
+
+  @media screen and (min-width: $lg) {
+    display: block;
+  }
+
+  @media screen and (max-width: $sm) {
+    color: rgba(0, 0, 0, 0.8);
+    display: block;
+    padding: 1rem;
+    right: 0;
+    top: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  100% { transform: translateX(-100%); }
+}

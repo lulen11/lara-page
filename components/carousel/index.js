@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 import styles from './carousel.module.scss';
 
 const defaultSettings = {
-  dots: true,
-  arrows: false,
+  dots: false,
+  arrows: true,
   infinite: true,
   speed: 1000,
   autoplaySpeed: 4000,
-  slidesToShow: 1,
+  slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
   responsive: [

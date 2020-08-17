@@ -62,6 +62,10 @@
       float: right;
     }
 
+    &:nth-child(odd){
+        margin-top: 3em;
+    }
+
     img {
       display: block;
     }
@@ -124,28 +128,24 @@
   :global(.slick-prev) {
     // background: url($cdnRoot + 'assets/images/carousel/arrow-prev-purple.svg') no-repeat top center / contain transparent;
     background-color: red;
-    left: 5rem;
+    left: 1rem;
 
     @media all and(min-width: $md) {
-      left: 8rem;
-    }
-
-    @media all and(min-width: $lg) {
-      left: 10rem;
+      left: 2rem;
     }
   }
   
   :global(.slick-next) {
     // background: url($cdnRoot + 'assets/images/carousel/arrow-next-purple.svg') no-repeat top center / contain transparent;
     background-color: blue;
-    right: 5rem;
+    right: 1rem;
 
     @media all and(min-width: $md) {
-      right: 8rem;
-    }
-
-    @media all and(min-width: $lg) {
-      right: 10rem;
+      right: 2rem;
     }
   }
+}
+
+.carouselPortfolio {
+    border: 3px solid lime;
 }
