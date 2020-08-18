@@ -4,7 +4,7 @@ import Carousel from '../../components/carousel';
 import Layout from '../../components/layout'
 import Title from '../../components/title'
 import Paragraph from '../../components/paragraph'
-import PortfolioModal from '../../components/portfolioModal';
+// import PortfolioModal from '../../components/portfolioModal';
 import styles from './portfolio.module.scss';
 
 // const portfolioItems = {
@@ -19,8 +19,8 @@ import styles from './portfolio.module.scss';
 // };
 
 export default function HelloJodie() {
-    const [showModal, setModal] = useState(false);
-    const toggleModal = () => setModal(!showModal);
+    // const [showModal, setModal] = useState(false);
+    // const toggleModal = () => setModal(!showModal);
     // const toggleModalBounds = () => setModal(!showModal);
 
 //   render() { 
@@ -46,15 +46,20 @@ export default function HelloJodie() {
 
         <main>
             <Layout>
-                <Title>
-                Hey Jodie, 
-                I'm mid-build on this portfolio so I've adapted it a little to share with you now. You already know this but... Hello! My name's Lara Salameh. I'm a frontend designer and I'm looking for new opportunities. 
+                <Title className={styles.portfolioIntro}>
+                Hello! My name's Lara Salameh. 
+                <br />
+                I'm a frontend designer and I'm looking for new opportunities. 
                 </Title>
                 <Paragraph>
+                Hey Jodie! I'm mid-build on this portfolio so I've adapted it a little to share with you here while I finish it off elsewhere. Please forgive the imperfections!
+                </Paragraph>
+                <Paragraph>
+                
                 For the past 10 years between marketing agencies, freelance, and a not-for-profit, I’ve worked in what I think is a pretty special middle-ground between design & development. 
                 </Paragraph>
                 <Paragraph>
-                As a frontend designer, I spend my days collaborating with great teams to design user experiences and then bring those designs to life through frontend code. My specialities are UX design and frontend development, with lots of experience in web, app & product design, branding, seo and start-up consulting.
+                As a frontend designer, I spend my days collaborating with great teams to design user experiences and then bring those designs to life through frontend code. My specialities lay within UX design and frontend development, with lots of experience in web, app & product design, branding, seo and start-up consulting.
                 </Paragraph>
                 <Paragraph>
                 I work remotely, based in Melbourne, Australia.
@@ -64,26 +69,42 @@ export default function HelloJodie() {
             {/* <PortfolioModal visible={showModal} toggleModalBounds={toggleModal}  >
                 <img src="images/portfolio/bounds.jpg" alt="Preview of Bounds Logo"/>
             </PortfolioModal> */}
-            <PortfolioModal visible={showModal} toggleModal={toggleModal}>
+            {/* <PortfolioModal visible={showModal} toggleModal={toggleModal} /> */}
 
-            </PortfolioModal>
+            <Carousel>
 
-            <Carousel className={styles.carouselPortfolio}>
-                
-
-                <div className={styles.project}>
+            <div className={styles.project}>
+                    <div className={styles.imgWrap}>
+                        <img src="images/portfolio/aime-preview2.jpg" alt="Preview of AIME"/>
+                    </div>
+                    <div className={styles.content}>
+                        <h3>Frontend designer at AIME</h3>
+                        <p>For the past 2 years I've worked full-time as a frontend designer with a great team at AIME. My role has been focused in frontend development though I've worked closely with our designer in a UX capacity too. Together with our international remote team, we've worked on a brand redesign, website redesigns and builds, campaign pages, a design system and a user portal for AIME mentors.</p>
+                        <a href="https://aimementoring.com/" target="_blank">Checkout the AIME website</a>
+                        <a href="https://portal.aimementoring.com/" target="_blank">Or the AIME mentor portal</a>
+                    </div>
+                    <div className={`${styles.imgWrap} ${styles.projectExample}`}>
+                        <img src="images/portfolio/aime-home.jpg" alt="AIME home"/>
+                        <img src="images/portfolio/aime-intv-mockup.jpg" alt="AIME INTV"/>
+                    </div>
+                </div><div className={styles.project}>
                     <div className={styles.imgWrap}>
                         <img src="images/portfolio/bounds.jpg" alt="Preview of Bounds Logo"/>
                     </div>
                     <div className={styles.content}>
                         <h3>UX/UI + branding for Sydney startup</h3>
-                        <p>This project is still under wraps, so without giving too much away, "James" came to me with an idea and from there I worked on the branding and UX/UI for a new Sydney startup.  </p>
+                        <p>This project is under wraps, so without giving too much away, here are some stills of the branding, and ux work I did for a new Sydney startup, Bounds.  </p>
 
                         {/* portfolioItems={bounds} */}
-                        <button onClick={toggleModal}  >
+                        {/* <button onClick={toggleModal}  >
                             hey hey
-                        </button>
-                        {/* <a id="fancybox-bounds" href="javascript:;">Inconspicuous UX</a>  */}
+                        </button> */}
+                    </div>
+                    <div className={`${styles.imgWrap} ${styles.projectExample}`}>
+                        <img src="images/portfolio/boundsbrand2.jpg" alt="Bounds Brand"/>
+                        <img src="images/portfolio/bounds2b.jpg" alt="Bounds Brand"/>
+                        <img src="images/portfolio/bounds2.jpg" alt="Bounds Brand"/>
+                        <img src="images/portfolio/boundsbrand1.jpg" alt="Bounds Brand"/>
                     </div>
                 </div>
                 <div className={styles.project}>
@@ -93,13 +114,17 @@ export default function HelloJodie() {
                     <div className={styles.content}>
                         <h3>Designed UI for Berlin Hospitality Group</h3>
                         <p>Nachbarn, translating to Neighbours in English is a mobile restaurant opening in Berlin. Nachbarn contracted me to design their very first website, requesting a playful and abstract vibe.</p>
-                            
                         {/* portfolioItems={nachbarn} */}
-                        <button onClick={toggleModal} >
+                        {/* <button onClick={toggleModal} >
                         diff
-                        </button>
+                        </button> */}
                         {/* <a id="fancybox-nachbarn" href="javascript:;">View designs</a>  */}
                     </div>
+                    <div className={`${styles.imgWrap} ${styles.projectExample}`}>
+                        <img src="images/portfolio/1-Nachbarn---Home-Page.jpg" alt="Nachbarn Website"/>
+                        <img src="images/portfolio/2-Nachbarn---Where-&-When.jpg" alt="Nachbarn Website"/>
+                    </div>
+                    
                 </div>
                 <div className={styles.project}>
                     <div className={styles.imgWrap}>
@@ -107,9 +132,10 @@ export default function HelloJodie() {
                     </div>
                     <div className={styles.content}>
                         <h3>Imagined, designed and built Pears</h3>
-                        <p>I created Pears as a passion-project through Thinkdo at OD. I wanted an online community for young UXers to encourage self-directed learning as a group. I completely built the front-end of this project and a back-end developer helped turn it into a functioning live product with over 100 active users. I'm currently in the process of trying to restore this project.</p>
-
-                        {/* <a id="fancybox-pears" href="javascript:;">View Pears</a>  */}
+                        <p>I created Pears as a passion-project through Thinkdo at Orange Digital. I wanted an online community for young UXers to encourage self-directed learning as a group. I completely built the front-end of this project and a back-end developer helped turn it into a functioning live product with over 100 active users. I'm currently in the process of trying to restore this project.</p>
+                    </div>
+                    <div className={`${styles.imgWrap} ${styles.projectExample}`}>
+                        <img src="images/portfolio/pearsFacebook-Ad-Pears.jpg" alt="Pears Website"/>
                     </div>
                 </div>
                 <div className={styles.project}>
@@ -119,8 +145,12 @@ export default function HelloJodie() {
                     <div className={styles.content}>
                         <h3>Redesigned Melbourne agency website and brand</h3>
                         <p>As the newest company in Customer Experience in Melbourne Tiny contacted me take on branding as well as UX/UI. The website design was nominated for an Awwward. The live site design has slightly changed since my work - original designs can be seen below.</p>
-                            
-                        {/* <a id="fancybox-tiny" href="javascript:;">View Tiny</a>  */}
+                    </div>
+                    <div className={`${styles.imgWrap} ${styles.projectExample}`}>
+                        <img src="images/portfolio/tiny2-Home-Contact-shelf-open@2x.jpg" alt="Tiny Website"/>
+                        <img src="images/portfolio/tiny1-Home@2x.jpg" alt="Tiny Website"/>
+                        <br />
+                        <img src="images/portfolio/tiny5-About---spotify-shelf-open@2x.jpg" alt="Tiny Website"/>
                     </div>
                 </div>
                 <div className={styles.project}>
@@ -130,21 +160,10 @@ export default function HelloJodie() {
                     <div className={styles.content}>
                         <h3>Rebranded  Melbourne law firm</h3>
                         <p>Working alongside Melbourne studio, Tiny CX, I was contracted to design a new brand for Buchanan Law. Wanting something that stood out amongst competition, Buchanan's brand is simple, modern and versatile.</p>
-                            
-
-                        {/* <a id="fancybox-buchanan" href="javascript:;">View brand</a>  */}
                     </div>
-                </div>
-                <div className={styles.project}>
-                    <div className={styles.imgWrap}>
-                        <img src="images/portfolio/unrealestate.png" alt="Swiping right on a good looking house"/>
-                    </div>
-                    <div className={styles.content}>
-                        <h3>Unreal UX for Unreal Estate</h3>
-                        <p>Unreal Estate is venture idea thought up in OD's innovation space for a well-known Queensland auto club. I worked closely with the UI designer to draw user flows, storyboards, develop wireframes and prototype the concept. This idea was closely built around the Build Measure Learn methodology. Following this build, I went on to planning marketing. </p>
-
-                        {/* <a id="fancybox-unrealestate" href="javascript:;">View screenshots</a>  */}
-                        <a class="wireframe" href="http://wireframes.orangedigital.com.au/unrealestate/UX_revision3/" target="_blank">The wireframe</a>
+                    <div className={`${styles.imgWrap} ${styles.projectExample}`}>
+                        <img src="images/portfolio/buchananbrand.jpg" alt="Buchanan"/>
+                        <img src="images/portfolio/buchananlogo.jpg" alt="Buchanan"/>
                     </div>
                 </div>
                 <div className={styles.project}>
@@ -152,11 +171,14 @@ export default function HelloJodie() {
                         <img src="images/portfolio/dailycrow.png" alt="Hold down to record in 10 secs or less"/>
                     </div>
                     <div className={styles.content}>
-                        <h3>Co-started up Daily Crow</h3>
-                        <p>Another venture from my innovation team, Daily Crow is an app that allows anyone to deliver/listen to the news in 10 seconds or less. Wanting to tap into a targeted testing audience, we adapted the application to appeal to university students and promptly created an MVP. To get the product on the market as soon as possible, I designed the app structure and built a web-modal application, disguised in an app.</p>
-                    
-
-                        {/* <a id="fancybox-dailycrow" href="javascript:;">View screenshots</a> */}
+                        <h3>Co-started Daily Crow</h3>
+                        <p>A venture from my innovation team at ThinkDo, Daily Crow is an app that allows anyone to deliver/listen to the news in 10 seconds or less. Wanting to tap into a targeted testing audience, we adapted the application to appeal to Brisbane university students and promptly created an MVP. To get the product on the market as soon as possible, I designed the app structure and built a web-modal application, disguised in an app.</p>
+                    </div>
+                    <div className={`${styles.imgWrap} ${styles.projectExample}`}>
+                        <img src="images/portfolio/dailycrowpreview2.PNG" alt="Daily Crow App"/>
+                        <img src="images/portfolio/dailycrowpreview3.PNG" alt="Daily Crow App"/>
+                        <img src="images/portfolio/dailycrowpreview4.PNG" alt="Daily Crow App"/>
+                        <img src="images/portfolio/dailycrowpreview1.PNG" alt="Daily Crow App"/>
                     </div>
                 </div>
                 <div className={styles.project}>
@@ -164,23 +186,16 @@ export default function HelloJodie() {
                         <img src="images/portfolio/kicbak.png" alt="The dashboard interface for Kicbak"/>
                     </div>
                     <div className={styles.content}>
-                        <h3>Co-started up Kicbak</h3>
+                        <h3>Co-started Kicbak</h3>
                         <p>I worked on the UX, prototyping and front-end development for an app dreamt up internally at OD called Kicbak. Kicbak is an app for mates to easily manage shared funds. If you pay for the pizza amongst 5 mates, chuck it in Kicbak and it instantly divvies out what everyone owes you. There’s no need for cash or pay back. </p>
-
-                        {/* <a id="fancybox-kicbak" href="javascript:;">View screenshots</a> */}
+                    </div>
+                    <div className={`${styles.imgWrap} ${styles.projectExample}`}>
+                        <img src="images/portfolio/kicbakpreview1.PNG" alt="Kicbak App"/>
+                        <img src="images/portfolio/kicbakpreview2.PNG" alt="Kicbak App"/>
+                        <img src="images/portfolio/kicbakpreview3.PNG" alt="Kicbak App"/>
                     </div>
                 </div>
-                <div className={styles.project}>
-                    <div className={styles.imgWrap}>
-                        <img src="images/portfolio/move.png" alt="Female user personas for MOVE website"/>
-                    </div>
-                    <div className={styles.content}>
-                        <h3>Early-stage UX for MOVE</h3>
-                        <p>Railways Credit Union,  underwent a large rebrand to MOVE. I led the UX team in gathering data, focus groups,  user personas, running interviews with staff and members, &amp; building wireframes from concepts to developed prototypes. This UX process was highly involved as the company was rebranding a 48 year brand identity. </p>
-                        <a href="http://wireframes.orangedigital.com.au/move/revision18/" target="_blank">The wireframe</a>	
-                    </div>
-                </div>
-                <div className={styles.project}>
+                {/* <div className={styles.project}>
                     <div className={styles.imgWrap}>
                         <img src="images/portfolio/wintergarden.png" alt="Wintergarden Gift Guide Wireframe"/>
                     </div>
@@ -190,15 +205,14 @@ export default function HelloJodie() {
 
                         <a href="https://wgarden.com.au/styles/" target="_blank">The site</a>	
                     </div>
-                </div>
+                </div> */}
                 <div className={styles.project}>
                     <div className={styles.imgWrap}>
                         <img src="images/portfolio/internship.png" alt="Maddie thinking or dancing"/>
                     </div>
                     <div className={styles.content}>
-                        <h3>Co-founded & managed the OD Internship Program</h3>
-                        <p>Five years ago, I approached one of OD's directors to start an intern program. We founded the program and every year since (sometimes twice) I recruited, lectured, ran workshops, hired/fired, mentored and hopefully gave young designers/developers some industry insight, experience, and support. </p>
-                        {/* <a href="http://internship.orangedigital.com.au/" target="_blank">The site</a>	 */}
+                        <h3>Founded & managed the OD Internship Program</h3>
+                        <p>When I worked at Orange Digital, I started a 12 week intern program which recruited local talent to run through a series of lectures, workshops, and work experience. As well as creating the program content and structure, I mentored and managed the intern cohort every year. I hope it gave young designers/developers some industry insight, experience, and support at the early stages of their careers. </p>
                     </div>
                 </div>
                 <div className={styles.project}>
@@ -207,12 +221,7 @@ export default function HelloJodie() {
                     </div>
                     <div className={styles.content}>
                         <h3>Co-founded, built &amp; ran a side biz, The Coffee Post</h3>
-                        <p>TCP is a monthly subscription service, supporting a community of independent roasters &amp; delivering local speciality beans to Australia-wide customers. We won seed money to take this idea forward. I built an online shop, produced a regimented workflow for product &amp; packaging. Created &amp; managed social marketing. Then went onto build relationships with roasters &amp; subscribers alike. I've since sold this business. </p>
-
-
-                        <a href="http://thecoffeepost.com.au/" target="_blank">The site</a>	
-                        <a href="https://www.facebook.com/thecoffeepostau" target="_blank">FB</a>	
-                        <a href="https://www.instagram.com/thecoffeepostau/" target="_blank">Insta</a>	
+                        <p>TCP was a monthly subscription service, supporting a community of independent roasters &amp; delivering local speciality beans to Australia-wide customers. We won seed money to take this idea forward. I built an online shop, produced a regimented workflow for product &amp; packaging. Created &amp; managed social marketing. Then went onto build relationships with roasters &amp; subscribers alike. When I left Brisbane, I sold this business and unfortunately the new owners didn't continue with it. </p>
                     </div>
                 </div>
                 

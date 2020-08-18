@@ -9,18 +9,29 @@ const defaultSettings = {
   arrows: true,
   infinite: true,
   speed: 1000,
-  autoplaySpeed: 4000,
+  autoplaySpeed: 8000,
   slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
   responsive: [
     {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        swipeToSlide: true,
+      },
+    },
+    {
       breakpoint: 768,
       settings: {
-        dots: true,
-        arrows: true,
-        infinite: true,
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        swipeToSlide: true,
+      },
+    },
+    {
+      breakpoint: 560,
+      settings: {
+        slidesToShow: 1,
         swipeToSlide: true,
       },
     },

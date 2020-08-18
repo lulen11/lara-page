@@ -110,42 +110,55 @@
     display: block;
     fill: currentColor;
     font-size: 0;
-    height: 50px;
     line-height: 0;
     margin: 0;
     outline: 0;
     overflow: hidden;
     padding: 0;
-    position: absolute;
+    position: fixed;
     stroke: currentColor;
     stroke-width: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
+    height: 50px;
     z-index: 10;
+
   }
-
-  :global(.slick-prev) {
-    // background: url($cdnRoot + 'assets/images/carousel/arrow-prev-purple.svg') no-repeat top center / contain transparent;
-    background-color: red;
-    left: 1rem;
-
-    @media all and(min-width: $md) {
-      left: 2rem;
+  @keyframes spinnyArrowLeft {
+    0%, 100% {
+        transform: rotate(-165deg);
     }
+    50% {
+        transform: rotate(-195deg);
+    }
+  }
+  @keyframes spinnyArrowRight {
+    0%, 100% {
+        transform: rotate(30deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+  }
+  :global(.slick-prev) {
+    background: url('../../public/images/arrow-slim.png') no-repeat center center / contain transparent;
+    left: 1rem;
+    transform: rotate(-165deg);
+    animation: spinnyArrowLeft 2s infinite;
+
+    // @media all and(min-width: $md) {
+    //   left: 2rem;
+    // }
   }
   
   :global(.slick-next) {
-    // background: url($cdnRoot + 'assets/images/carousel/arrow-next-purple.svg') no-repeat top center / contain transparent;
-    background-color: blue;
+    background: url('../../public/images/arrow-slim.png') no-repeat center center / contain transparent;
     right: 1rem;
+    animation: spinnyArrowRight 2s infinite;
 
-    @media all and(min-width: $md) {
-      right: 2rem;
-    }
+    // @media all and(min-width: $md) {
+    //   right: 2rem;
+    // }
   }
-}
-
-.carouselPortfolio {
-    border: 3px solid lime;
 }
