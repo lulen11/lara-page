@@ -1,0 +1,65 @@
+@import '../../styles/global.module';
+
+.callout {
+    color: $tangerine;
+}
+.columns {
+    border: 2px solid blue;
+    color: grey;
+}
+@keyframes dizzyColors {
+    0%, 100% {
+        color: $secondary-color;
+    }
+    50% {
+        color: $tertiary-color;
+    }
+}
+.project {
+    background-color: #ffffffe0;
+
+    h3 {
+        font-family: "butlerbold";
+        font-size: 3rem;
+        line-height: 1.1em;
+    }
+
+    p, a {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.6em;
+        font-weight: 300;;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 1em;
+        display: block;
+        transition: all 0.5s linear;
+        animation: dizzyColors 3s infinite;
+        &:hover {
+            color: $royalblue !important;
+        }
+    }
+}
+.imgWrap {
+    overflow: hidden;
+    border-right: 1px solid #f1f1f1;
+    
+    img {
+        width: 21em;
+        margin: 0 auto;
+        display: block;
+    }
+
+}
+
+.content {
+    padding: 1em 2em 3em;
+    border-right: 1px solid #f1f1f1;
+
+    p {
+        margin-bottom: 2em;
+    }
+}

@@ -16,11 +16,11 @@
 }
 
 .featureHeading {
-  font-family: 'Source Serif Pro', serif;
+  font-family: "butlerbold";
   font-weight: 300;
-  font-size: 2rem;
-  line-height: 1.4em;
-  margin-bottom: 2em;
+  font-size: 2.3rem;
+  line-height: 1.3em;
+  margin-bottom: 1.2em;
 
   @media screen and (min-width: $md) {
     margin-right: 4em;
@@ -35,5 +35,18 @@
       &:hover {
         border-bottom: 0.2em solid $royalblue;
       }
+  }
+  
+  span {
+    color: $tangerine;
+    text-decoration: none;
+    transition: all 0.5s linear;
+    font-size: 1rem;
+    line-height: 0.5rem;
+  }
+
+  &.portfolioIntro {
+    font-family: "butlerbold";
+
   }
 }
