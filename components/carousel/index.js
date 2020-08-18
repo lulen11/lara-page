@@ -10,10 +10,16 @@ const defaultSettings = {
   infinite: true,
   speed: 1000,
   autoplaySpeed: 8000,
-  slidesToShow: 4,
+  slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true,
   responsive: [
+    {
+      breakpoint: 1350,
+      settings: {
+        slidesToShow: 4,
+      },
+    },
     {
       breakpoint: 1024,
       settings: {
