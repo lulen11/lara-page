@@ -80,7 +80,7 @@ export default function Hello() {
                     <div className={styles.content}>
                         <h3>Frontend designer at AIME</h3>
                         <p>For the past 2 years I've worked full-time as a frontend designer with a great team at AIME. My role has been focused in frontend development though I've worked closely with our designer in a UX capacity too. Together with our international remote team, we've worked on a brand redesign, website redesigns and builds, campaign pages, a design system and a user portal for AIME mentors.</p>
-                        <a href="https://aimementoring.com/" target="_blank">Checkout the AIME website</a>
+                        <a href="https://v5.aimementoring.com/" target="_blank">Checkout the AIME website</a>
                         <a href="https://portal.aimementoring.com/" target="_blank">Or the AIME mentor portal</a>
                     </div>
                     <div className={`${styles.imgWrap} ${styles.projectExample}`}>
